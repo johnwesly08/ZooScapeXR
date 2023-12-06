@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #004b23;
+    --color2: #006400;
+    --color3: #38b000;
+    --color4: #fcfcfc;
+    --color5: #000000;
+    --color6: #0D1321;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+.loading_page {
+    display: grid;
+    place-items: center;
+}
+
+.loading_page .loader {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #c9c9c9;
+    border-top-color: var(--color2);
+    border-radius: 50%;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    background-color: var(--color4);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+header .logo {
+    color: var(--color3);
+    letter-spacing: 1px;
+}
+
+header .btn {
+    border: none;
+    outline: none;
+    background-color: var(--color3);
+    color: var(--color4);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-radius: 4px;
+}
+
+header .btn a::before {
+    content: '< ';
+}
+
+header .btn a {
+    color: var(--color4);
+    width: 100%;
+    height: 100%;
+    padding: 6px 20px;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+/* DASHBOARD */
+.dashboard_page {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('./assets/pexels-hendrik-cornelissen-2862070.jpg'); */
+    background-image: url('./assets/dashboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.dashboard_page .main {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dashboard_page .main .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.dashboard_page .main .content .dashboard_title {
+    color: var(--color4);
+    background-color: var(--color3);
+    padding: 4px 20px;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.dashboard_page .main .content .welnote {
+    color: var(--color4);
+    font-weight: 200;
+    width: 50%;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5rem;
+}
+
+.dashboard_page .main .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0px 20px;
+}
+
+.dashboard_page .main .buttons .btn {
+    border: none;
+    outline: none;
+    background-color: var(--color3);
+    color: var(--color4);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-radius: 4px;
+}
+
+.dashboard_page .main .buttons .btn a {
+    color: var(--color4);
+    width: 100%;
+    height: 100%;
+    padding: 8px 20px;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+/* RESPONSEIVE */
+@media screen and (max-width: 800px) {
+    .dashboard_page .main .content .welnote {
+        width: 90%;
+    }
+}
+
+/* NAVIGATION */
+.navbar_page {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_page nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_page nav ul {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.navbar_page nav ul li {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.navbar_page nav ul li:nth-child(1) {
+    background-image: url('./assets/forest.jpg');
+}
+
+.navbar_page nav ul li:nth-child(2) {
+    background-image: url('./assets/desert.jpg');
+}
+
+.navbar_page nav ul li:nth-child(3) {
+    background-image: url('./assets/polar.jpg');
+}
+
+.navbar_page nav ul li:nth-child(4) {
+    background-image: url('./assets/aquatic.jpg');
+}
+
+.navbar_page nav ul li:nth-child(5) {
+    background-image: url('./assets/grassland.jpg');
+}
+
+.navbar_page nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color4);
+    padding: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar_page nav ul li:hover a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* PAGE NOT FOUND */
+.page_not_found_page {
+    padding-top: 60px;
+    display: grid;
+    place-items: center;
+}
+
+.page_not_found_page .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_not_found_page .content .title {
+    font-size: 10rem;
+    color: var(--color2);
+}
+
+.page_not_found_page .content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color3);
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color6);
+}
+
+footer .footer_content {
+    font-size: 1.1rem;
+    color: var(--color4);
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+    footer .footer_content {
+        font-size: 1rem;
+    }
+
+    footer .footer_content span {
+        display: block;
+        text-align: center;
+    }
+}
