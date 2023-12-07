@@ -71,6 +71,7 @@ header {
 header .logo {
     color: var(--color3);
     letter-spacing: 1px;
+    font-size: 1.6rem;
 }
 
 header .btn {
@@ -103,12 +104,31 @@ header .btn a {
     background-image: url('./assets/dashboard.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 30px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .dashboard_page {
+        background-position: 8% 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard_page {
+        background-position: 20% 0%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .dashboard_page {
+        background-position: 22% 0%;
+    }
 }
 
 .dashboard_page .main {
@@ -117,7 +137,7 @@ header .btn a {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .dashboard_page .main .content {
@@ -180,8 +200,18 @@ header .btn a {
 
 /* RESPONSEIVE */
 @media screen and (max-width: 800px) {
+    .dashboard_page .main .content .dashboard_title {
+        font-size: 1.8rem;
+    }
+
     .dashboard_page .main .content .welnote {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard_page .main .content .dashboard_title {
+        font-size: 1.6rem;
     }
 }
 
