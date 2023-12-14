@@ -3,36 +3,36 @@ import { Link } from 'react-router-dom'
 import Header from './Header'
 import Loader from './Loader'
 
-function Navigation() {
+function VideoNavigation() {
     return (
         <Fragment>
             <Header />
             <section className="page navbar_page">
-                <h1 className="title">Environments</h1>
+                <h1 className="title">Recordings</h1>
                 <nav>
                     <ul>
                         <li>
-                            <Link to={'/theme'}>Forest</Link>
+                            <Link to={'/video/forest-video'}>Forest</Link>
                         </li>
                         <li>
-                            <Link to={'/theme'}>Desert</Link>
+                            <Link to={'/video/desert-video'}>Desert</Link>
                         </li>
                         <li>
-                            <a href="https://five-superficial-trunk.glitch.me" target='_blank'>Polar</a>
+                            <Link to={'/video/polar-video'}>Polar</Link>
                         </li>
                         <li>
-                            <Link to={'/theme'}>Aquatic</Link>
+                            <Link to={'/video/aquatic-video'}>Aquatic</Link>
                         </li>
                         <li>
-                            <Link to={'/theme'}>Grassland</Link>
+                            <Link to={'/video/grassland-video'}>Grassland</Link>
                         </li>
                     </ul>
                 </nav>
-                <Link to={'/videos'} className='request'>Go To Videos</Link>
+                <Link to={'/explore'} className='request'>Visit Environments</Link>
             </section>
             <Loader />
         </Fragment>
     )
 }
 
-export default Navigation
+export default VideoNavigation
