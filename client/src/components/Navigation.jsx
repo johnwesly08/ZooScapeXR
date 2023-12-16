@@ -12,7 +12,7 @@ function Navigation() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to={'/theme'}>Forest</Link>
+                            <a href="https://palm-dorian-swoop.glitch.me" target='_blank'>Forest</a>
                         </li>
                         <li>
                             <Link to={'/theme'}>Desert</Link>
