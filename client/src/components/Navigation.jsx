@@ -12,10 +12,10 @@ function Navigation() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to={'/theme'}>Forest</Link>
+                            <a href="https://palm-dorian-swoop.glitch.me" target='_blank'>Forest</a>
                         </li>
                         <li>
-                            <Link to={'/theme'}>Desert</Link>
+                            <a href="https://tender-shy-singularity.glitch.me/" target='_blank'>Desert</a>
                         </li>
                         <li>
                             <a href="https://five-superficial-trunk.glitch.me" target='_blank'>Polar</a>
