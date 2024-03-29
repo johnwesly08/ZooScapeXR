@@ -5,7 +5,7 @@ function Footer() {
         <Fragment>
             <footer>
                 <h1 className="footer_content">
-                    ZooScapeXR &copy; 2023 | <span>House Of Metazord</span>
+                    <span>ZooScapeXR</span> &copy; 2024 | Maverick's
                 </h1>
             </footer>
         </Fragment>
